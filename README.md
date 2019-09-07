@@ -1,2 +1,0 @@
-# chat
-A Simple Chat
