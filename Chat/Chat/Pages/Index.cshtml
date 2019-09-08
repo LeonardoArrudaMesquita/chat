@@ -1,32 +1,38 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "APS";
 }
 
-@page
-<div class="container">
-    <div class="row">&nbsp;</div>
-    <div class="row">
-        <div class="col-6">&nbsp;</div>
-        <div class="col-6">
-            Usuário<input type="text" id="txtUsuario" />
-            <br />
-            Message...<input type="text" id="txtMensagem" />
-            <input type="button" id="btnEnviarMensagem" value="Enviar" />
+    <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-6">&nbsp;</div>
+            <div class="col-6">
+                Usuário:
+                @Html.TextBox("txtUsuario", null, new { @class = "form-control" })
+                <br />                                
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <hr />
+        <div class="row">
+            <div class="col-12">
+                <hr />
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-6">&nbsp;</div>
-        <div class="col-6">
-            <ul id="listaMensagem"></ul>
+        <div class="row">
+            <div class="col-6">&nbsp;</div>
+            <div class="col-6">
+                <ul id="listaMensagem"></ul>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-10">
+                @Html.TextBox("txtMensagem", null, new { @class = "form-control col-xs-4", @placeholder = "Digite aqui..." })
+            </div>
+            <div class="col-2">                
+                <input type="button" id="btnEnviarMensagem" value="Enviar" class="btn btn-success" />
+            </div>
+            </div>
     </div>
-</div>
 <script src="~/lib/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/chat.js"></script>

@@ -138,7 +138,7 @@ $.extend( $.fn, {
 		}
 		return valid;
 	},
-
+    
 	// https://jqueryvalidation.org/rules/
 	rules: function( command, argument ) {
 		var element = this[ 0 ],
